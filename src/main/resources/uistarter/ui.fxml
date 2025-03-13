@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import jfxtras.scene.control.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1006.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.uicontroller.UiController">
+    <top>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="100.0" styleClass="hbox" stylesheets="@TopHBoxCSS.css" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="postCodeField1" prefHeight="66.0" prefWidth="115.0" promptText="1234XY" styleClass="text-field" stylesheets="@TopHBoxCSS.css">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </TextField>
+                <Label lineSpacing="50.0" prefHeight="100.0" prefWidth="400.0" stylesheets="@TopHBoxCSS.css" text="Input the two postal codes">
+                    <font>
+                        <Font size="50.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="postCodeField2" prefHeight="66.0" prefWidth="115.0" promptText="1234XY" styleClass="text-field" stylesheets="@TopHBoxCSS.css">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <LocalTimePicker fx:id="timePicker" minHeight="100.0" minuteStep="1" prefWidth="377.0" />
+                <Button fx:id="calculate" alignment="CENTER" mnemonicParsing="false" onAction="#calculate" prefHeight="66.0" prefWidth="399.0" stylesheets="@TopHBoxCSS.css" text="Calculate Route" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <StackPane fx:id="mapStackPane" prefHeight="980.0" prefWidth="1920.0" BorderPane.alignment="TOP_CENTER" />
+    </center>
+    <bottom>
+        <HBox prefHeight="377.0" prefWidth="1920.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);" styleClass="hbox" stylesheets="@TopHBoxCSS.css" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="343.0" prefWidth="621.0">
+                    <Label fx:id="walkTimeAndFirstStopLabel" prefHeight="131.0" prefWidth="622.0" style="-fx-font-size: 30px; -fx-text-fill: white; -fx-font-weight: bold;" wrapText="true" />
+                    <TitledPane fx:id="routeDetailsPane" animated="true" collapsible="true" prefHeight="262.0" prefWidth="388.0" text="Route Details">
+                        <content>
+                            <ScrollPane fitToWidth="true" prefHeight="138.0" prefWidth="386.0">
+                                <content>
+                                    <VBox fx:id="routeDetailsBox">
+                                        <children>
+                                            <Label fx:id="RouteDetailsLabel" style="-fx-font-size: 16px;" wrapText="true" />
+                                        </children>
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+                        </content>
+                    </TitledPane>
+                </VBox>
+                <VBox prefHeight="343.0" prefWidth="458.0">
+                    <Label fx:id="transferYesOrNoLabel" prefHeight="132.0" prefWidth="458.0" style="-fx-font-size: 30px; -fx-text-fill: white; -fx-font-weight: bold;" wrapText="true" />
+                    <TitledPane fx:id="transferDetailsPane" animated="true" collapsible="true" prefHeight="261.0" prefWidth="366.0" text="Transfer Details">
+                        <content>
+                            <ScrollPane fitToWidth="true" prefHeight="213.0" prefWidth="364.0">
+                                <content>
+                                    <VBox fx:id="transferDetailsBox">
+                                        <children>
+                                            <Label fx:id="transferAtStopsLabel" style="-fx-font-size: 16px;" wrapText="true" />
+                                        </children>
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+                        </content>
+                    </TitledPane>
+                </VBox>
+                <VBox prefHeight="418.0" prefWidth="335.0">
+                    <Label fx:id="totalJourneyTimeLabel" prefHeight="181.0" prefWidth="388.0" style="-fx-font-size: 30px; -fx-text-fill: white; -fx-font-weight: bold;" wrapText="true" />
+                    <Label fx:id="arrivalTimeLabel" layoutX="10.0" layoutY="10.0" prefHeight="181.0" prefWidth="388.0" style="-fx-font-size: 30px; -fx-text-fill: white; -fx-font-weight: bold;" wrapText="true" />
+                </VBox>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

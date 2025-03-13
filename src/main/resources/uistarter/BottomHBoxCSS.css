@@ -1,0 +1,15 @@
+.hbox {
+    -fx-background-color: #607D8B; /* Cool blue-grey background */
+    -fx-border-color: #455A64; /* Darker shade for border */
+    -fx-border-width: 2; /* Solid border width for definition */
+    -fx-border-radius: 5; /* Slightly rounded corners for a modern look */
+    -fx-padding: 15; /* Ample padding for breathing space around elements */
+    -fx-spacing: 10; /* Space between children elements */
+    -fx-alignment: center-left; /* Center items vertically, align left */
+}
+.hbox> .label {
+    -fx-font-size: 15px; /* Slightly larger font size for readability */
+    -fx-font-weight: bold; /* Make labels bold for emphasis */
+    -fx-pref-width: 350;
+    -fx-pref-height: 100px;
+}

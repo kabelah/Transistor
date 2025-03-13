@@ -1,0 +1,35 @@
+.hbox {
+    -fx-background-color: #607D8B; /* Cool blue-grey background */
+    -fx-border-color: #455A64; /* Darker shade for border */
+    -fx-border-width: 2; /* Solid border width for definition */
+    -fx-border-radius: 5; /* Slightly rounded corners for a modern look */
+    -fx-padding: 15; /* Ample padding for breathing space around elements */
+    -fx-spacing: 10; /* Space between children elements */
+    -fx-alignment: center-left; /* Center items vertically, align left */
+}
+
+.hbox > .label {
+    -fx-text-fill: #ECEFF1; /* Light grey text for contrast */
+    -fx-font-size: 35px; /* Slightly larger font size for readability */
+    -fx-font-weight: bold; /* Make labels bold for emphasis */
+}
+
+
+.hbox > .text-field {
+    -fx-font-size: 30px;
+    -fx-pref-width: 150; /* Ensure text fields are not too cramped */
+    -fx-background-color: #CFD8DC; /* Lighter background for the fields */
+    -fx-border-radius: 3; /* Soften the text field edges */
+    -fx-padding: 4 4; /* Padding inside text fields */
+    -fx-alignment: Center;
+}
+
+.hbox > .button {
+    -fx-font-size: 40px;
+    -fx-background-color: #FFC107; /* Vibrant amber for the action button */
+    -fx-text-fill: #263238; /* Deep blue text for contrast */
+    -fx-font-weight: bold; /* Bold text to make the button text stand out */
+    -fx-padding: 5 15; /* Optimal padding for button size and readability */
+    -fx-border-radius: 5; /* Rounded corners for the button */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); /* Subtle shadow for depth */
+}
